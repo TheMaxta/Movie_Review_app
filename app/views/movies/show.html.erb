@@ -30,11 +30,38 @@
               </tbody>
 
             </table>
+            <%= link_to "Write a Review", new_movie_review_path(@movie) %>
         </div>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <h1 class="review_title"><%= @movie.title %></h1>
+        <p><%= @movie.description %></p>
+
+        <% if @reviews.blank? %>
+          <h3>No Reviews have been added yet... </h3>
+            <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-danger" %>
+        <% else %>
+            <% @reviews.each do |review| %>
+              <div class="reviews">
+
+
+                <p><strong>Rating: </strong><%= review.rating %></p>
+                <p><strong><%= review.user.email %> said: </strong><br><%= review.comment %></p>
+
+              </div>
+
+              <% end %>
+              <br>
+                          <%= link_to "Write a Review", new_movie_review_path(@movie), class: "btn btn-danger" %>
+
+        <% end %>      
+
       </div>
     </div>
   </div>
 </div>
+
+
 
 <p id="notice"><%= notice %></p>
 <button class="btn btn-default btn-sm">
