@@ -1,10 +1,18 @@
 <% if !user_signed_in? %>
   <div class="jumbotron">
     <h1>Your Favorite Movies Reviewed!</h1>
-    <p>Hashtag hoodie numblecore selfies. Authentic kiffiyeh leggings Kickstarter, narwhal jean shorts Vice Austin cardigan Organix drinking vinegar hipster ipsum content lol</p>
+    <p>Max's movie/review.com is a large community where people from all over the world come, to discuss thier favorite, or least favorite flicks. Sign up for free, and start posting your own movies, and movie reviews!</p>
     <p><%= link_to "Sign Up to Write a Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
-<% end %> 
+<% else %> 
+
+  <div class="jumbotron">
+    <h1>Welcome back! <% current_user %></h1>
+    <p>Max's movie/review.com is a large community where people from all over the world come, to discuss their favorite, or least favorite flicks. Click a movie below, and read what people have to say!</p>
+
+    </div>
+<% end %>    
+
 
 <div class="row">
   <% @movies.each do |movie| %>

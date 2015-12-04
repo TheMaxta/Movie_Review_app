@@ -45,5 +45,50 @@ body {
 .thumbnail {
 	background: #484545;
 	border: none;
+    border-radius: 8px;
+}
+
+.swag {
+    background: #A59B9B;
+    padding: 25px;
+    border-radius: 9px;
+
+    }
+
+.swag textarea {
+	height: 200px;
+    width: 80%;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.swag input {
+	width: 50%;
+	padding: 5px 10px;
+	border-radius: 4px;
+	margin: 10px;
+}
+
+.swag2 {
+    background: #A59B9B;
+    padding: 8px 20px;
+    width: 19%;
+    height: 55px;
+    border-radius: 9px;
+    button {
+    	width: 180px;
+    	height: 40px;
+        background-color: #501B1A
+    }
+    a {
+    	width: 200px;
+    	color: white;
+    	font-weight: 600px;
+        letter-spacing: 3px;
+    }
+}
+
+a.navbar-brand{
+    font-size: 22px;
 }
 
