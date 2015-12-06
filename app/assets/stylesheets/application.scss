@@ -21,6 +21,29 @@ body {
 
 }
 
+nav.navbar a:hover{
+    border-bottom: 3px solid black;
+}
+
+.navbar {
+
+}
+
+h4.navbar-text {
+    margin-right: 85px;
+
+}
+.row2 {
+    background: #6D0A0A;
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+img {
+    border-radius: 10px;
+}
+
 .review_title {
 	margin: 0 0 20px 0;
 }
@@ -39,13 +62,14 @@ body {
 }
 
 .navbar.navbar-default {
-	background: #DADADA
+	background: #DADADA;
+    margin-bottom: 0;
 }
 
 .thumbnail {
-	background: #484545;
+	background: rgba(0, 0, 0, 0.31);
 	border: none;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .swag {
@@ -90,5 +114,10 @@ body {
 
 a.navbar-brand{
     font-size: 22px;
+}
+
+.swag-container{
+    background: white;
+
 }
 

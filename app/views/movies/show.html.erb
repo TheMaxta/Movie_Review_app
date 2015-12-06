@@ -58,8 +58,7 @@
           <br>
             <% @reviews.each do |review| %>
               <div class="reviews">
-                <div class="star-rating" data-score= <%= review.rating %> ></div>
-
+                <div class="star-rating" data-score= <%= review.rating %>>  </div> 
                 
                 <p><strong>
                   <% if review.user == current_user %>

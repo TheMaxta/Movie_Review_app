@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_review, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :set_movie
   before_action :authenticate_user!
 
@@ -48,6 +48,18 @@ class ReviewsController < ApplicationController
       format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+
+  def upvote
+    @review = Review.find(params[:id])
+    @review.votes.create
+    redirect_to(reviews_path)
+    
+  end
+
+  def show
+
   end
 
   private

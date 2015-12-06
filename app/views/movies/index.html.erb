@@ -13,13 +13,26 @@
     </div>
 <% end %>    
 
-
-<div class="row">
-  <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+<div class="row2">
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
       </div>
-    </div>
-  <% end %>  
+    <% end %>  
+  </div>
 </div>
+
+
+<script>
+  $('.star-rating').raty({
+    path: '/assets/',
+    readOnly: true,
+    score: function() {
+        return $(this).attr('data-score');
+    }
+
+  });
+</script>
