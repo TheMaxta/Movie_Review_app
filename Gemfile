@@ -19,5 +19,11 @@ group :development do
   gem 'paperclip', '~> 4.2.0'
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem 'searchkick', '~> 1.0', '>= 1.0.3'
+  gem "awesome_print", require:"ap"
+  group :development do
+  gem "better_errors"
+  end
+  gem "binding_of_caller"
+
 end
 
