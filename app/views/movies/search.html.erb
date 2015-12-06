@@ -1,0 +1,13 @@
+
+<div class="row2">
+  <div class="row">
+  <h2 class="results-txt">Search Results...</h2>
+    <% @movies.each do |movie| %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
+      </div>
+    <% end %>  
+  </div>
+</div>
